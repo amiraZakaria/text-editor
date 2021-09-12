@@ -44,42 +44,26 @@ void PrintStack(stack<string> s)
     s.push(x);
 }
 
-void copy_stack(stack<string> s1, stack<string> s2)
+void copy_stack(stack<string> &s1, stack<string> &s2)
 {
     stack<string>tmp;
 
-     while(!s1.empty()){
 
-        tmp.push(s1.top());
-        s1.pop();
-    }
-    copy_stack(s1,tmp);
-    copy_stack(tmp,s2);
-
-
-  /*  s2.top()= s1.top();
-
-    for(int i=s1.top()-1 ; i>=0 ; i--){
-
-        s2.push(i);
-
-
-    }
 
     while(!s1.empty()){
 
-        tmp.push(s1.top());
+        tmp.push(s1.top());  //s1--->tmp
         s1.pop();
     }
 
     while(!tmp.empty()){
 
-        s1.push(tmp.top());
+        s1.push(tmp.top());  //tmp -->s1,s2
         s2.push(tmp.top());
         tmp.pop();
 
     }
-*/
+
 }
 
 
